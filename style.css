@@ -469,4 +469,39 @@ footer a {
   }
 }
 
+/* PUBLICATION AND CITATION LINKS */
+
+.publication-link {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 12px;
+  background: #256A9F;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.publication-link:hover {
+  background: #174B72;
+  color: #FFFFFF;
+}
+
+.citation-box {
+  padding: 24px;
+  margin: 22px 0;
+  background: #FFFFFF;
+  border-left: 5px solid #256A9F;
+  border-radius: 12px;
+}
+
+.citation-box h3 {
+  margin-top: 0;
+  color: #174B72;
+}
+
+.citation-box a:not(.publication-link) {
+  overflow-wrap: anywhere;
+}
+
 
