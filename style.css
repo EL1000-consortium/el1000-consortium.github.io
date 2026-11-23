@@ -204,4 +204,62 @@ footer a {
   }
 }
 
-  
+
+/* ----------------------------------
+   EL1000 GOVERNANCE PAGE
+---------------------------------- */
+
+.governance-header {
+  background: #EAE7F4;
+  color: #49348C;
+}
+
+.governance-header h1 {
+  color: #49348C;
+}
+
+.governance-steps {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.governance-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #F7F5FC;
+  border-left: 5px solid #6650AF;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #6650AF;
+  color: white;
+  font-weight: bold;
+}
+
+.governance-step h3 {
+  margin: 0 0 8px;
+  color: #49348C;
+}
+
+.governance-step p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .governance-step {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
