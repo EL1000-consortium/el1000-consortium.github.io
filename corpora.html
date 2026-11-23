@@ -174,26 +174,46 @@
   </p>
 </footer>
 
+
 <script>
-  // Create the world map
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("corpus-map");
+
+  if (!container) {
+    console.error("Map container not found.");
+    return;
+  }
+
+  if (typeof L === "undefined") {
+    container.textContent =
+      "The map library could not load. Please check your connection.";
+    console.error("Leaflet library is not available.");
+    return;
+  }
+
   const map = L.map("corpus-map", {
+    center: [15, 0],
+    zoom: 2,
+    minZoom: 1,
     worldCopyJump: true,
     scrollWheelZoom: false
-  }).setView([15, 0], 2);
+  });
 
-  // Add map tiles
   L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
-      attribution:
-        '&copy; OpenStreetMap contributors',
+      attribution: "&copy; OpenStreetMap contributors",
       maxZoom: 18
     }
   ).addTo(map);
 
-  // Corpus markers will be added here
-  // once locations have been verified.
+  // Refresh map dimensions after layout.
+  setTimeout(function () {
+    map.invalidateSize();
+  }, 300);
+});
 </script>
+
 
 </body>
 </html>
