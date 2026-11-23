@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="Explore the research corpora contributing to EL1000.">
+
+  <title>Corpora | EL1000 Consortium</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet: interactive map library -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+</head>
+
+<body>
+
+<header class="corpora-header">
+  <h1>EL1000 Corpora</h1>
+  <p>
+    Exploring children's everyday language
+    environments across cultures
+  </p>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="corpora.html" aria-current="page">Corpora</a>
+  <a href="participate.html">Participate</a>
+  <a href="governance.html">Governance</a>
+  <a href="publications.html">Publications</a>
+</nav>
+
+<main>
+
+<section>
+  <h2>Participating Corpora</h2>
+
+  <p>
+    EL1000 brings together research corpora
+    documenting children's everyday language
+    environments in diverse communities.
+  </p>
+
+  <div class="corpus-stat">
+    <strong>36</strong>
+    <span>Participating corpora</span>
+  </div>
+
+  <p>
+    Participating corpora differ in their
+    linguistic, cultural, and recording contexts.
+    Together, they support comparative research
+    on early language environments.
+  </p>
+</section>
+
+<section class="corpora">
+  <h2>Geographic Coverage</h2>
+
+  <p>
+    Explore the world map below.
+    Verified participating locations will be
+    added as the public corpus directory
+    is prepared.
+  </p>
+
+  <div id="corpus-map"
+       role="region"
+       aria-label="Interactive world map">
+  </div>
+
+  <p class="map-note">
+    The map currently shows geographic context
+    only. No corpus locations have been plotted yet.
+  </p>
+</section>
+
+<section>
+  <h2>What Do the Corpora Contain?</h2>
+
+  <p>
+    EL1000 works with automated measures derived
+    from daylong audio recordings collected
+    during children's everyday activities.
+  </p>
+
+  <div class="corpus-grid">
+
+    <article class="corpus-card">
+      <h3>Adult Speech</h3>
+      <p>
+        Automated estimates of speech in
+        children's everyday environments.
+      </p>
+    </article>
+
+    <article class="corpus-card">
+      <h3>Child Vocalizations</h3>
+      <p>
+        Automated measures of children's
+        vocal activity.
+      </p>
+    </article>
+
+    <article class="corpus-card">
+      <h3>Conversational Interactions</h3>
+      <p>
+        Interaction-related measures where
+        appropriate processing outputs
+        are available.
+      </p>
+    </article>
+
+  </div>
+
+  <p>
+    The available measures vary by corpus
+    and processing method.
+  </p>
+</section>
+
+<section class="corpora">
+  <h2>Corpus Directory</h2>
+
+  <p>
+    A public directory of participating
+    corpora is being prepared.
+    It will provide verified information
+    about corpus names, countries,
+    languages, and research references.
+  </p>
+
+  <p>
+    Corpus descriptions will not include
+    raw audio recordings or restricted
+    participant information.
+  </p>
+</section>
+
+<section>
+  <h2>Contribute a Corpus</h2>
+
+  <p>
+    Researchers interested in contributing
+    eligible derived measures to EL1000
+    are welcome to contact the consortium.
+  </p>
+
+  <a class="button"
+     href="mailto:el1000.board@gmail.com?subject=EL1000%20corpus%20contribution">
+    Contact EL1000
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p>EL1000 Research Consortium</p>
+  <p>
+    <a href="mailto:el1000.board@gmail.com">
+      el1000.board@gmail.com
+    </a>
+  </p>
+</footer>
+
+<script>
+  // Create the world map
+  const map = L.map("corpus-map", {
+    worldCopyJump: true,
+    scrollWheelZoom: false
+  }).setView([15, 0], 2);
+
+  // Add map tiles
+  L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      attribution:
+        '&copy; OpenStreetMap contributors',
+      maxZoom: 18
+    }
+  ).addTo(map);
+
+  // Corpus markers will be added here
+  // once locations have been verified.
+</script>
+
+</body>
+</html>
