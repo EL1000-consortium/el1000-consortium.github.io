@@ -1,0 +1,131 @@
+
+:root {
+  --primary: #256A9F;
+  --primary-light: #D6E8F6;
+
+  --governance: #6650AF;
+  --governance-light: #EAE7F4;
+
+  --corpora: #F67A2C;
+  --corpora-light: #FFDFC5;
+  --corpora-text: #A7470A;
+
+  --background: #F8FAFC;
+  --text: #243447;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0;
+}
+
+nav {
+  background: var(--white);
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 25px 20px;
+}
+
+section {
+  background: var(--white);
+  padding: 35px;
+  margin: 25px 0;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #00000008;
+}
+
+h2 {
+  color: var(--primary);
+}
+
+.governance {
+  background: var(--governance-light);
+  border-left: 5px solid var(--governance);
+}
+
+.governance h2 {
+  color: var(--governance);
+}
+
+.corpora {
+  background: var(--corpora-light);
+  border-left: 5px solid var(--corpora);
+}
+
+.corpora h2 {
+  color: var(--corpora-text);
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 11px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 28px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 24px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 10px;
+  }
+}
+  
